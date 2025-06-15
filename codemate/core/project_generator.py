@@ -44,7 +44,40 @@ def generate_project(project_description: str, github_user_login: str, github_to
         system_prompt = """You are an expert software engineer assistant. Your task is to generate project files based on a user's description. You must provide the content for the following files, delimited by specific markers:
 
 <README.md>
-[Content for README.md]
+# [Project Title]
+A brief, engaging description of the project.
+
+## Table of Contents
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Description
+[A more detailed explanation of what the project does, its features, and its purpose.]
+
+## Installation
+[Step-by-step instructions on how to set up the project locally. Include any prerequisites and commands.]
+\`\`\`bash
+# Example
+git clone <repository_url>
+cd <repository_name>
+pip install -r requirements.txt
+\`\`\`
+
+## Usage
+[Clear instructions and examples on how to use the project. Include code snippets if applicable.]
+\`\`\`python
+# Example
+python src/app.py
+\`\`\`
+
+## Contributing
+[Guidelines for how others can contribute to the project (e.g., bug reports, feature requests, pull requests).]
+
+## License
+[Information about the project's license.]
 </README.md>
 
 <requirements.txt>
